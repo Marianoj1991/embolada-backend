@@ -25,6 +25,11 @@ app.use(
 app.use('/api/messages', messageRoutes)
 
 app.listen(PORT, async () => {
-  console.log(`Server running on port ${PORT}. Press ctrl + C to terminate`);
-  await connectDB()
+  try {
+    await connectDB()
+    console.log(`Server running on port ${PORT}`)
+  } catch (err) {
+    console.error('DB connection failed:', err)
+  }
+
 })  
