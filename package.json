@@ -1,0 +1,20 @@
+{
+  "name": "contame-que-te-embola",
+  "version": "1.0.0",
+  "description": "Este proyecto es una colaboracion con Yanina Silva, para que pueda desquitarse",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/index.js"
+  },
+  "author": "Mariano Jimenez",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0"
+  }
+}
