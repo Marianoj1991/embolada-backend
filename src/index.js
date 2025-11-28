@@ -6,10 +6,12 @@ import { connectDB } from './lib/db.connection.js'
 // Routes
 import messageRoutes from './routes/message.route.js'
 
-process.loadEnvFile()
+if(process.env.NODE_ENV !== 'production') {
+  process.loadEnvFile()
+}
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 // Middlewares
 app.use(express.json())

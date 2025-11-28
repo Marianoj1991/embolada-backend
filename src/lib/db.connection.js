@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-process.loadEnvFile()
+if (process.env.NODE_ENV !== 'production') {
+  process.loadEnvFile()
+}
 
 export async function connectDB() {
   try {
